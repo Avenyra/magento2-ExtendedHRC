@@ -1,0 +1,197 @@
+/* purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* purgecss end ignore */
+
+@import url(tailwindcss/components/forms.css);
+@import url(tailwindcss/components/messages.css);
+@import url(tailwindcss/components/button.css);
+@import url(tailwindcss/components/modal.css);
+@import url(tailwindcss/components/theming.css);
+
+@import "tailwindcss/utilities";
+
+/* Shopify Style Overrides */
+body {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+/* Hide standard Magento Header and Footer on Checkout */
+header.page-header,
+.page-header,
+.header-container,
+.header.content,
+.nav-sections,
+.footer-container,
+.page-footer,
+footer.page-footer,
+footer,
+.checkout-header,
+.checkout-footer {
+  display: none !important;
+}
+
+/* Card Overrides: Shopify checkout is flat and clean */
+.card, .card-interactive {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Inputs & Form Controls */
+.form-input,
+.form-email,
+.form-select,
+.form-multiselect,
+.form-textarea {
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  color: #333333 !important;
+  background-color: #ffffff !important;
+  width: 100% !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+.form-input:focus,
+.form-email:focus,
+.form-select:focus,
+.form-multiselect:focus,
+.form-textarea:focus {
+  border-color: #111111 !important;
+  box-shadow: 0 0 0 1px #111111 !important;
+  outline: none !important;
+}
+
+::placeholder,
+.form-input::placeholder,
+.form-email::placeholder,
+.form-textarea::placeholder {
+  color: #737373 !important;
+  opacity: 1 !important;
+}
+
+/* Labels and Headers styling */
+.admin__page-section-title,
+.form-section-title,
+h1, h2, h3, h4, h5, h6,
+legend {
+  font-weight: 600 !important;
+  color: #111111 !important;
+  letter-spacing: -0.02em !important;
+  font-size: 18px !important;
+  border-bottom: none !important;
+  margin-bottom: 1rem !important;
+  text-transform: none !important;
+}
+
+/* ToggleBox / Collapsible sections */
+.toggle-box-title,
+.toggle-box-header,
+.card-header,
+.header-wrapper,
+h1.toggle-box-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #111111 !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  margin-bottom: 1rem !important;
+  text-transform: none !important;
+}
+
+/* Adobe Commerce Primary Color Place Order and Coupon buttons */
+.btn-primary,
+button[type="submit"].btn-primary,
+button.btn-primary {
+  background-color: #f26322 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 18px 24px !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out !important;
+  cursor: pointer !important;
+}
+
+.btn-primary:hover,
+button[type="submit"].btn-primary:hover,
+button.btn-primary:hover {
+  background-color: #d85218 !important;
+  color: #ffffff !important;
+  transform: scale(0.99) !important;
+}
+
+.btn-primary:disabled,
+button[type="submit"].btn-primary:disabled,
+button.btn-primary:disabled {
+  background-color: #e6e6e6 !important;
+  color: #999999 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Custom checkbox styles to match Shopify checkout */
+input[type="checkbox"].form-checkbox,
+.form-checkbox {
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 4px !important;
+  width: 18px !important;
+  height: 18px !important;
+  color: #111111 !important;
+  background-color: #ffffff !important;
+  transition: all 0.15s ease-in-out !important;
+  cursor: pointer !important;
+}
+input[type="checkbox"].form-checkbox:focus,
+.form-checkbox:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 1px #111111 !important;
+}
+input[type="checkbox"].form-checkbox:checked,
+.form-checkbox:checked {
+  background-color: #111111 !important;
+  border-color: #111111 !important;
+}
+
+/* Shipping and Payment methods inner box layout to match standard Shopify radio panels */
+.shipping-method-option,
+.payment-method-option,
+.radio-panel,
+.shipping-method-item,
+.payment-method-item {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+  margin-bottom: 0.5rem !important;
+  background-color: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.shipping-method-option-selected,
+.payment-method-option-selected,
+.radio-panel-selected,
+.shipping-method-item-selected,
+.payment-method-item-selected {
+  border-color: #111111 !important;
+  background-color: #fbfbfb !important;
+  box-shadow: 0 0 0 1px #111111 !important;
+}
+
+

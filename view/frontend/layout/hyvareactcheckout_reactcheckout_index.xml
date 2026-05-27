@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="FriendsOfHyva_ReactCheckout::css/styles.css" />
+        <css src="Avenyra_ExtendedHRC::css/styles.css" defer="defer" />
+    </head>
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="checkout.translations">
+            <arguments>
+                <argument name="checkout_translations" xsi:type="array">
+                    <item name="avenyra_extended_react_checkout" xsi:type="string">
+                        <![CDATA[Delivery Note,Leave a note for delivery...,Max 255 characters]]>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="checkout.scripts">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Avenyra_ExtendedHRC::react-script.phtml</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

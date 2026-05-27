@@ -1,0 +1,19 @@
+{
+    "name": "avenyra/module-extended-hrc",
+    "description": "Extended Hyvä React Checkout module for Avenyra",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": "^7.4 || ^8.0 || ^8.1 || ^8.2 || ^8.3",
+        "magento/framework": "*",
+        "hyva-themes/magento2-react-checkout": "^1.1"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Avenyra\\ExtendedHRC\\": ""
+        }
+    }
+}
